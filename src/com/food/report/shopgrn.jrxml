@@ -1,0 +1,171 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Blank_A4_1" language="java" pageWidth="226" pageHeight="800" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="256af5f6-0632-44d1-84ca-2d7cbbce2b9b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<parameter name="Parameter2" class="java.lang.String"/>
+	<parameter name="Parameter3" class="java.lang.String"/>
+	<parameter name="Parameter7" class="java.lang.String"/>
+	<parameter name="Parameter4" class="java.lang.String"/>
+	<parameter name="Parameter5" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="COLUMN_0" class="java.lang.String"/>
+	<field name="COLUMN_1" class="java.lang.String"/>
+	<field name="COLUMN_2" class="java.lang.String"/>
+	<field name="COLUMN_3" class="java.lang.String"/>
+	<field name="COLUMN_4" class="java.lang.String"/>
+	<field name="COLUMN_5" class="java.lang.String"/>
+	<field name="COLUMN_6" class="java.lang.String"/>
+	<field name="COLUMN_7" class="java.lang.String"/>
+	<field name="COLUMN_8" class="java.lang.String"/>
+	<title height="60" splitType="Stretch">
+		<element kind="textField" uuid="006e3bc0-fca4-40fc-94f3-af46480caf47" x="130" y="41" width="42" height="6" forecolor="#070807" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<expression><![CDATA[$P{Parameter3}]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+		</element>
+		<element kind="staticText" uuid="37faeff3-2ac3-49ab-b36e-cdd5dc8c3f9c" x="105" y="41" width="24" height="6" forecolor="#171515" fontName="Arial" fontSize="4.0" bold="true" vTextAlign="Middle">
+			<text><![CDATA[Supplier Name :]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="be9694c3-c8d1-4de0-b635-ebd1af3a65c1" mode="Opaque" x="0" y="0" width="180" height="21" forecolor="#030000" backcolor="rgba(3, 0, 0, 0.0)" fontName="Arial" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Food  Shop]]></text>
+		</element>
+		<element kind="staticText" uuid="6e19599d-5797-4699-9582-cfdaab4844da" mode="Opaque" x="0" y="21" width="180" height="10" forecolor="#030000" backcolor="rgba(3, 0, 0, 0.0)" fontName="Arial" fontSize="5.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[NO : Migamu Road,Maradagahamula]]></text>
+		</element>
+		<element kind="staticText" uuid="85cd2387-f517-4459-8ed2-46085dc48e96" mode="Opaque" x="46" y="31" width="89" height="6" forecolor="#030000" backcolor="rgba(3, 0, 0, 0.0)" fontName="Arial" fontSize="5.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Mobile : 0776070221]]></text>
+		</element>
+		<element kind="staticText" uuid="b56383fa-cec8-4a28-940a-66e7b9dcf0a0" mode="Opaque" x="7" y="42" width="24" height="6" forecolor="#030000" backcolor="rgba(3, 0, 0, 0.0)" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[GRN ID :]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="e62f0971-e4af-4170-9080-c4241d94aede" x="36" y="42" width="42" height="6" forecolor="#383535" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<expression><![CDATA[$P{Parameter2}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="220323f9-26fa-469e-a5c8-0de9417f03b7" x="7" y="51" width="24" height="6" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Left">
+			<text><![CDATA[Date :]]></text>
+		</element>
+		<element kind="textField" uuid="ab4e35d8-a36c-4a50-8afd-9ac44d41001f" x="36" y="51" width="42" height="6" fontName="Arial" fontSize="4.0">
+			<expression><![CDATA[$P{Parameter7}]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+		</element>
+		<element kind="line" uuid="5b55f48e-6634-4592-acf3-17e25b16491b" x="0" y="37" width="180" height="1" forecolor="#0A0A0A"/>
+		<property name="com.jaspersoft.studio.layout"/>
+	</title>
+	<columnHeader height="13" splitType="Stretch">
+		<element kind="line" uuid="8fc115a6-4191-4b60-8e86-3eb0c795ecae" x="0" y="0" width="180" height="1" forecolor="#0A0A0A"/>
+		<element kind="staticText" uuid="3c181e3c-cb71-4438-8547-fca4ef96eb98" x="4" y="2" width="13" height="9" fontName="Arial" fontSize="4.0" bold="true">
+			<text><![CDATA[No]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b05b8b3-2a15-4415-b16b-43ff33c1c546"/>
+		</element>
+		<element kind="staticText" uuid="d876fa64-1386-490e-894a-910553d9b28d" x="17" y="2" width="27" height="9" fontName="Arial" fontSize="4.0" bold="true">
+			<text><![CDATA[Product ]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be889e2e-c250-4db4-98eb-49b58f1e1e5d"/>
+		</element>
+		<element kind="staticText" uuid="a83622fc-769f-4e12-89a6-1368f8bc4c14" x="44" y="2" width="20" height="9" fontName="Arial" fontSize="4.0" bold="true">
+			<text><![CDATA[Category]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3fb5f9cb-7ee6-41fe-a0bc-ebe3563de4f9"/>
+		</element>
+		<element kind="staticText" uuid="4aba4e87-b38a-40c4-9b37-1965a7e9a3d9" x="64" y="2" width="14" height="9" fontName="Arial" fontSize="4.0" bold="true">
+			<text><![CDATA[Size]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88c8227c-a8fb-49ea-a31c-cfff1c2205d9"/>
+		</element>
+		<element kind="staticText" uuid="a4e0141e-d5e5-4994-b5d4-0e4b6e4e9387" x="78" y="2" width="10" height="9" fontName="Arial" fontSize="4.0" bold="true">
+			<text><![CDATA[Type]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a2f9ac0-8231-4ce1-9d44-f9c1e2acac57"/>
+		</element>
+		<element kind="staticText" uuid="7064b495-195d-4ba5-abaf-d16a95a3658a" x="88" y="2" width="10" height="9" fontName="Arial" fontSize="4.0" bold="true">
+			<text><![CDATA[Size of product]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8fb5dc2-b589-46bb-b02a-e316eb36dce3"/>
+		</element>
+		<element kind="staticText" uuid="b2a74fe2-fc95-4b04-b8d6-c3e27b7490e4" x="98" y="1" width="22" height="10" fontName="Arial" fontSize="4.0">
+			<text><![CDATA[Buying price]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="90796ed1-d729-44ea-8e04-930942d67762"/>
+		</element>
+		<element kind="staticText" uuid="10566cf4-18d5-4ca3-8cb2-8db776d7752a" x="120" y="1" width="20" height="10" fontName="Arial" fontSize="4.0">
+			<text><![CDATA[Selling Price]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b79e7b2-0f53-4e50-a89e-da6fb37eaa26"/>
+		</element>
+		<element kind="staticText" uuid="e70ecad6-e530-407e-b1e5-2bd5a5eb44f5" x="150" y="2" width="26" height="9" fontName="Arial" fontSize="4.0">
+			<text><![CDATA[Total]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3fe177f-b664-4751-a0d1-db271cd46fc6"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<element kind="textField" uuid="a11417ad-7725-4289-ad90-d9ed49b44995" x="4" y="1" width="13" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_0}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b05b8b3-2a15-4415-b16b-43ff33c1c546"/>
+			</element>
+			<element kind="textField" uuid="b7ee3ac7-51cf-4509-9d48-a5b22a412425" x="17" y="1" width="27" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_1}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be889e2e-c250-4db4-98eb-49b58f1e1e5d"/>
+			</element>
+			<element kind="textField" uuid="1b7a618b-8eab-4f16-a7a9-757dbba43277" x="44" y="1" width="20" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_2}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3fb5f9cb-7ee6-41fe-a0bc-ebe3563de4f9"/>
+			</element>
+			<element kind="textField" uuid="c10a012f-7d3c-46e1-a8dd-7c492e0d09d1" x="64" y="1" width="14" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_3}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88c8227c-a8fb-49ea-a31c-cfff1c2205d9"/>
+			</element>
+			<element kind="textField" uuid="99d59009-3057-493d-9e2e-190f9e3a4c39" x="78" y="1" width="10" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_4}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a2f9ac0-8231-4ce1-9d44-f9c1e2acac57"/>
+			</element>
+			<element kind="textField" uuid="fa68103b-9ed9-4cd4-b8dd-74ef2a4f9515" x="88" y="1" width="10" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_5}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8fb5dc2-b589-46bb-b02a-e316eb36dce3"/>
+			</element>
+			<element kind="textField" uuid="4bb5f370-7c62-42a9-a9d3-e801724cd4f1" x="98" y="1" width="22" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_6}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="90796ed1-d729-44ea-8e04-930942d67762"/>
+			</element>
+			<element kind="textField" uuid="4d4a93a6-1a76-401a-a081-b265e8094fb3" x="150" y="1" width="26" height="9" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_8}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3fe177f-b664-4751-a0d1-db271cd46fc6"/>
+			</element>
+			<element kind="textField" uuid="dcfe0185-acd6-48bb-85d5-8318611ce4ad" x="120" y="1" width="20" height="8" fontName="Arial" fontSize="3.0">
+				<expression><![CDATA[$F{COLUMN_7}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b79e7b2-0f53-4e50-a89e-da6fb37eaa26"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="33" splitType="Stretch">
+		<element kind="staticText" uuid="9e7c5a0e-5f47-43b4-8968-b96a802dc485" mode="Opaque" x="106" y="3" width="26" height="9" forecolor="#030101" backcolor="#FFFFFF" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Total Price :]]></text>
+		</element>
+		<element kind="textField" uuid="d0a5ba55-138c-4fc5-8000-533bb7879ca6" mode="Opaque" x="135" y="3" width="40" height="9" forecolor="#080707" backcolor="#FFFFFF" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{Parameter1}]]></expression>
+		</element>
+		<element kind="line" uuid="e7cdc6b8-d27c-483c-b41f-db65ede08768" x="0" y="0" width="180" height="1" forecolor="#030303"/>
+		<element kind="staticText" uuid="be7eda0c-d96b-4c6b-b82d-e2c0e38a72de" mode="Opaque" x="106" y="12" width="26" height="9" forecolor="#030101" backcolor="#FFFFFF" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Amount :]]></text>
+		</element>
+		<element kind="textField" uuid="f08e5ab3-d2e2-4e00-868a-d58f086be395" x="135" y="12" width="40" height="8" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Right">
+			<expression><![CDATA[$P{Parameter4}]]></expression>
+		</element>
+		<element kind="staticText" uuid="50f0478f-5cbe-407d-b76b-feff3103197d" mode="Opaque" x="106" y="21" width="26" height="9" forecolor="#030101" backcolor="#FFFFFF" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Balance :]]></text>
+		</element>
+		<element kind="textField" uuid="37b30898-e5b4-43c3-8252-dca3f6ecba5e" x="135" y="21" width="40" height="9" fontName="Arial" fontSize="4.0" bold="true" hTextAlign="Right">
+			<expression><![CDATA[$P{Parameter5}]]></expression>
+		</element>
+	</columnFooter>
+	<pageFooter height="26">
+		<element kind="staticText" uuid="aaebeb5f-7177-4843-97fd-922e4daff94b" mode="Opaque" x="44" y="1" width="91" height="19" forecolor="#030000" backcolor="rgba(3, 0, 0, 0.0)" fontName="Arial" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Thank You]]></text>
+		</element>
+		<element kind="staticText" uuid="caaec701-f3b1-4637-a5bb-0c7c4ae5b1d0" mode="Opaque" x="60" y="20" width="63" height="6" forecolor="#030000" backcolor="rgba(3, 0, 0, 0.0)" fontName="Arial" fontSize="3.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Dovelop By Chamod Dananjaya]]></text>
+		</element>
+		<element kind="line" uuid="2de280ef-3a48-4877-8043-c60750ad0a00" x="-1" y="0" width="181" height="1" forecolor="#030000"/>
+		<element kind="line" uuid="ef9abb61-8e72-4110-acc0-e7a4511d499d" x="0" y="0" width="180" height="1" forecolor="#0A0A0A"/>
+	</pageFooter>
+</jasperReport>
