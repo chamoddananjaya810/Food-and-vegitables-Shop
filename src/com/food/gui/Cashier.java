@@ -79,7 +79,7 @@ public class Cashier extends javax.swing.JFrame {
                 vector.add(suplierRs.getString("Mobile"));
                 vector.add(suplierRs.getString("age"));
                 vector.add(suplierRs.getString("username"));
-                vector.add(suplierRs.getString("passworld"));
+
                 vector.add(suplierRs.getString("gender.gender_name"));
                 vector.add(suplierRs.getString("cashiertype.type"));
                 vector.add(suplierRs.getString("status.status"));
@@ -404,11 +404,11 @@ public class Cashier extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id", "Nic", "full name", "Address", "Mobile", "Age", "Username", "Passworld", "Gender", "Cashiertype", "Status"
+                "Id", "Nic", "full name", "Address", "Mobile", "Age", "Username", "Gender", "Cashiertype", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -870,35 +870,48 @@ public class Cashier extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         int sr = jTable1.getSelectedRow();
-        //        DecimalFormat priceFormat = new DecimalFormat("0.00");
+
         if (evt.getClickCount() == 1) {
             if (sr == -1) {
                 JOptionPane.showMessageDialog(this, "Please Select The Row.", "Warning", JOptionPane.QUESTION_MESSAGE);
-
             } else {
+                // Populate text fields
+                jTextField2.setText(jTable1.getValueAt(sr, 1).toString()); // Name
+                jTextField3.setText(jTable1.getValueAt(sr, 2).toString()); // Age
+                jTextField4.setText(jTable1.getValueAt(sr, 3).toString()); // Address
+                jTextField5.setText(jTable1.getValueAt(sr, 4).toString()); // Email
+                jTextField6.setText(jTable1.getValueAt(sr, 5).toString()); // Contact
+                jTextField7.setText(jTable1.getValueAt(sr, 6).toString()); // Username
 
-                jTextField2.setText(jTable1.getValueAt(sr, 1).toString());
-                jTextField3.setText(jTable1.getValueAt(sr, 2).toString());
+                // Get cashier password from DB using cashier ID
+                try {
+                    String cashierId = jTable1.getValueAt(sr, 0).toString();
+                    ResultSet cashierRs = MySQL.search("SELECT * FROM `cashier` WHERE `id`='" + cashierId + "'");
 
-                jTextField4.setText(jTable1.getValueAt(sr, 3).toString());
-                jTextField5.setText(jTable1.getValueAt(sr, 4).toString());
-                jTextField6.setText(jTable1.getValueAt(sr, 5).toString());
-                jTextField7.setText(jTable1.getValueAt(sr, 6).toString());
-                jPasswordField1.setText(jTable1.getValueAt(sr, 7).toString());
-                String gender = jTable1.getValueAt(sr, 8).toString();
-
-                if (gender.equals("Male")) {
-
-                    jRadioButton1.setSelected(true);
-                } else {
-                    jRadioButton2.setSelected(true);
-
+                    if (cashierRs.next()) {
+                        String cashierPass = cashierRs.getString("passworld"); // corrected column name
+                        System.out.println("cashierPass: " + cashierPass);
+                        jPasswordField1.setText(cashierPass);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(this, "Error loading cashier password: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 }
 
-                jComboBox2.setSelectedItem(jTable1.getValueAt(sr, 9).toString());
+                // Set gender radio buttons
+                String gender = jTable1.getValueAt(sr, 7).toString();
+                if (gender.equalsIgnoreCase("Male")) {
+                    jRadioButton1.setSelected(true); // Male
+                } else {
+                    jRadioButton2.setSelected(true); // Female
+                }
 
+                // Set role in combo box
+                String role = jTable1.getValueAt(sr, 8).toString();
+                jComboBox2.setSelectedItem(role);
             }
         }
+
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
@@ -941,11 +954,13 @@ public class Cashier extends javax.swing.JFrame {
             String age = jTextField6.getText();
             String username = jTextField7.getText();
             String password = String.valueOf(jPasswordField1.getPassword());
-
+            System.out.println(Nic.length());
             if (Nic.isBlank()) {
-
-                JOptionPane.showMessageDialog(this, "Nic Number is required", "Warning", JOptionPane.QUESTION_MESSAGE);
-                jTextField2.setBorder(new LineBorder(Color.red, 1));
+            JOptionPane.showMessageDialog(this, "NIC Number is required...", "Warning", JOptionPane.QUESTION_MESSAGE);
+            jTextField2.setBorder(new LineBorder(Color.red, 1));
+        } else if (Nic.length() != 12) {
+            JOptionPane.showMessageDialog(this, "NIC Number must be exactly 10 characters long.", "Warning", JOptionPane.QUESTION_MESSAGE);
+            jTextField2.setBorder(new LineBorder(Color.red, 1));
             } else if (Name.isBlank()) {
                 jTextField2.setBorder(BorderFactory.createEmptyBorder());
                 JOptionPane.showMessageDialog(this, "Full Name is required...", "Warning", JOptionPane.QUESTION_MESSAGE);
@@ -1060,8 +1075,6 @@ public class Cashier extends javax.swing.JFrame {
             if (selectedRow == 0) {
                 JOptionPane.showMessageDialog(this, "Can't change status...", "Warning", JOptionPane.QUESTION_MESSAGE);
             } else {
-                
-                
 
                 String id = jTable1.getValueAt(selectedRow, 0).toString();
                 String status = jTable1.getValueAt(selectedRow, 10).toString();
@@ -1102,10 +1115,11 @@ public class Cashier extends javax.swing.JFrame {
         String cashiertype = String.valueOf(jComboBox2.getSelectedItem());
 
         if (nic.isBlank()) {
-
-            JOptionPane.showMessageDialog(this, "Nic Number is required...", "Warning", JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "NIC Number is required...", "Warning", JOptionPane.QUESTION_MESSAGE);
             jTextField2.setBorder(new LineBorder(Color.red, 1));
-
+        } else if (nic.length() != 12) {
+            JOptionPane.showMessageDialog(this, "NIC Number must be exactly 10 characters long.", "Warning", JOptionPane.QUESTION_MESSAGE);
+            jTextField2.setBorder(new LineBorder(Color.red, 1));
         } else if (fullname.isBlank()) {
 
             jTextField2.setBorder(BorderFactory.createEmptyBorder());
